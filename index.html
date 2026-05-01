@@ -3,139 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avrupa Cıvata | Global OEM Stratejik Çözüm Ortağı</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Avrupa Civata | Isuzu Stratejik Proje Kataloğu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #020408; color: #e2e8f0; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .official-badge { border-top: 2px solid #3b82f6; background: linear-gradient(180deg, rgba(59, 130, 246, 0.08) 0%, transparent 100%); }
-        .gradient-text { background: linear-gradient(90deg, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .section-title { border-left: 4px solid #3b82f6; padding-left: 1rem; }
+        :root {
+            --primary-blue: #0A2647;
+            --accent-blue: #144272;
+            --isuzu-red: #ED1C24;
+            --light-gray: #F8F9FA;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--light-gray); color: #333; }
+       .navbar { background-color: var(--primary-blue); border-bottom: 3px solid var(--isuzu-red); }
+       .hero { background: linear-gradient(rgba(10, 38, 71, 0.8), rgba(10, 38, 71, 0.8)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80') center/cover; color: white; padding: 100px 0; text-align: center; }
+       .section-title { border-left: 5px solid var(--isuzu-red); padding-left: 15px; margin-bottom: 30px; font-weight: 700; color: var(--primary-blue); }
+       .card-project { border: none; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; height: 100%; }
+       .card-project:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+       .tech-badge { background-color: var(--accent-blue); color: white; padding: 5px 12px; border-radius: 50px; font-size: 0.85rem; }
+       .table-custom thead { background-color: var(--primary-blue); color: white; }
+       .footer { background-color: #111; color: #999; padding: 50px 0; font-size: 0.9rem; }
+       .contact-info i { color: var(--isuzu-red); }
     </style>
 </head>
-<body class="min-h-screen pb-20">
-    <div class="max-w-6xl mx-auto px-6 pt-12 space-y-12">
-        
-        <header class="glass p-16 rounded-[3.5rem] text-center relative overflow-hidden shadow-2xl">
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-700 via-white to-blue-700 opacity-40"></div>
-            <div class="flex justify-center mb-6 text-blue-500 opacity-70">
-                <i data-lucide="shield-check" class="w-12 h-12"></i>
-            </div>
-            <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter text-white mb-2">AVRUPA CİVATA</h1>
-            <p class="text-xl text-blue-400 font-bold tracking-[0.4em] uppercase italic">OEM Stratejik Üretim Çözümleri</p>
-            
-            <div class="mt-10 flex flex-wrap justify-center gap-8 text-[10px] font-mono text-slate-500 uppercase tracking-widest border-t border-white/5 pt-8">
-                <div class="flex flex-col"><span class="text-slate-400">Sanayi Sicil No</span><span>543240</span></div>
-                <div class="flex flex-col"><span class="text-slate-400">TOBB Kapasite</span><span>2023/682</span></div>
-                <div class="flex flex-col"><span class="text-slate-400">Kuruluş</span><span>2005 (20 Yıllık Tecrübe)</span></div>
-            </div>
-        </header>
+<body>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="glass p-10 rounded-[2.5rem] space-y-4">
-                <h3 class="text-2xl font-black text-white italic uppercase tracking-tight flex items-center gap-3">
-                    <i data-lucide="target" class="text-blue-500"></i> Misyonumuz
-                </h3>
-                <p class="text-slate-400 leading-relaxed italic">
-                    20 yıllık üretim tecrübemizi ileri teknoloji CNC altyapımızla birleştirerek; savunma, otomotiv ve enerji sektörlerindeki global liderlere sıfır hata prensibi ve yüksek hassasiyetli bağlantı çözümleri sunmak.
-                </p>
-            </div>
-            <div class="glass p-10 rounded-[2.5rem] space-y-4">
-                <h3 class="text-2xl font-black text-white italic uppercase tracking-tight flex items-center gap-3">
-                    <i data-lucide="eye" class="text-blue-500"></i> Vizyonumuz
-                </h3>
-                <p class="text-slate-400 leading-relaxed italic">
-                    Türkiye'nin yerli üretim gücünü global OEM standartlarında temsil ederek, önümüzdeki 5 yıl içerisinde Avrupa ve Orta Doğu pazarında "Stratejik Tier-1 Tedarikçi" konumuna erişmek.
-                </p>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">AVRUPA CİVATA <span class="text-danger">|</span> ISUZU PORTAL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#vizyon">Kurumsal Vizyon</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projeler">Projeler</a></li>
+                <li class="nav-item"><a class="nav-link" href="#teknik">Teknik Veriler</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-danger btn-sm text-white ms-lg-3 px-4" href="http://avrupacivatamakina.com" target="_blank">Resmi Site</a></li>
+            </ul>
         </div>
-
-        <div class="space-y-6">
-            <h2 class="text-sm font-bold text-slate-500 uppercase tracking-[0.3em] section-title">KOSGEB İşletme Değerlendirme Verileri (2024)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="glass p-8 rounded-3xl text-center official-badge">
-                    <div class="text-slate-500 text-[10px] font-bold uppercase mb-2">Net Satış Artışı</div>
-                    <div class="text-4xl font-black text-white italic">%44</div>
-                    <p class="text-[9px] text-blue-400 mt-2 italic">Sektör Ortalaması: %35</p>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center official-badge">
-                    <div class="text-slate-500 text-[10px] font-bold uppercase mb-2">Kapasite Kullanımı</div>
-                    <div class="text-4xl font-black text-white italic">%77,2</div>
-                    <p class="text-[9px] text-blue-400 mt-2 italic">Sektör Ortalaması: %71</p>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center official-badge">
-                    <div class="text-slate-500 text-[10px] font-bold uppercase mb-2">İşgücü Verimliliği</div>
-                    <div class="text-4xl font-black text-white italic">%36</div>
-                    <p class="text-[9px] text-blue-400 mt-2 italic">Sürekli Gelişim Endeksi</p>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center official-badge">
-                    <div class="text-slate-500 text-[10px] font-bold uppercase mb-2">Tahsilat Hızı</div>
-                    <div class="text-4xl font-black text-white italic">40 GÜN</div>
-                    <p class="text-[9px] text-blue-400 mt-2 italic">Sektör Ortalaması: 68 GÜN</p>
-                </div>
-            </div>
-        </div>
-
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="glass p-10 rounded-[2.5rem] space-y-6">
-                <h3 class="text-3xl font-black text-white italic flex items-center gap-4 uppercase tracking-tight">
-                    <i data-lucide="settings-2" class="text-blue-500"></i> Üretim Yetkinliği
-                </h3>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-end border-b border-white/5 pb-2">
-                        <span class="text-slate-400 font-medium italic">CNC Dik İşleme (Büyük Parça)</span>
-                        <span class="text-white font-black text-xl italic tracking-tighter">5.2 METRE</span>
-                    </div>
-                    <div class="flex justify-between items-end border-b border-white/5 pb-2">
-                        <span class="text-slate-400 font-medium italic">CNC Tornalama Kapasitesi</span>
-                        <span class="text-white font-black text-xl italic tracking-tighter">Ø400x2200mm</span>
-                    </div>
-                    <div class="flex justify-between items-end border-b border-white/5 pb-2">
-                        <span class="text-slate-400 font-medium italic">Friksiyon Pres Grubu</span>
-                        <span class="text-white font-black text-xl italic tracking-tighter">150 TON</span>
-                    </div>
-                    <div class="flex justify-between items-end border-b border-white/5 pb-2">
-                        <span class="text-slate-400 font-medium italic">Tolerans Hassasiyeti</span>
-                        <span class="text-blue-400 font-black text-xl italic tracking-tighter">±0,01 MM</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass p-10 rounded-[2.5rem] bg-blue-900/5 border-l-4 border-blue-600 flex flex-col justify-between">
-                <div>
-                    <h3 class="text-3xl font-black text-white italic flex items-center gap-4 uppercase tracking-tight mb-6">
-                        <i data-lucide="check-circle" class="text-blue-500"></i> Kalite Standartları
-                    </h3>
-                    <p class="text-slate-400 leading-relaxed italic mb-8">
-                        Üretim hattımız, IATF 16949 gereklilikleri ve ISO 9001:2015 yönetim sistemi ile tam uyumlu çalışmaktadır. Savunma ve otomotiv OEM adaylığı kapsamında 100% izlenebilirlik ve kalite kontrol protokolleri uygulanmaktadır.
-                    </p>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-4 py-2 bg-white/5 rounded-full text-[10px] font-black text-white italic border border-white/10 tracking-widest uppercase">ISO 9001:2015</span>
-                    <span class="px-4 py-2 bg-white/5 rounded-full text-[10px] font-black text-white italic border border-white/10 tracking-widest uppercase">TOBB 2023/682</span>
-                    <span class="px-4 py-2 bg-blue-600/20 rounded-full text-[10px] font-black text-blue-400 italic border border-blue-500/30 tracking-widest uppercase">OEM Eligible</span>
-                </div>
-            </div>
-        </section>
-
-        <footer class="glass p-10 rounded-[3rem] flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-center md:text-left">
-                <p class="text-2xl font-black text-white italic uppercase">Hakan Burak PARLAKKÂN</p>
-                <p class="text-blue-500 text-xs font-bold tracking-widest uppercase italic">Makine Mühendisi & Genel Müdür</p>
-            </div>
-            <div class="flex flex-col md:flex-row gap-8 text-[11px] text-slate-500 italic font-mono uppercase tracking-widest">
-                <div class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-blue-500"></i> ADANA OSB / SEYHAN</div>
-                <div class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-blue-500"></i> info@avrupacivata.com</div>
-                <div class="flex items-center gap-2"><i data-lucide="globe" class="w-4 h-4 text-blue-500"></i> avrupacivata.com</div>
-            </div>
-        </footer>
-
-        <p class="text-center text-slate-800 text-[10px] font-mono uppercase tracking-[1em] italic pb-10">
-            STRATEGIC PRODUCTION PARTNER FOR GLOBAL OEM LEADERS
-        </p>
     </div>
-    <script>lucide.createIcons();</script>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <h1 class="display-3 fw-bold mb-3">Geleceği Bağlıyoruz</h1>
+        <p class="lead mb-4">Anadolu Isuzu ve Avrupa Civata iş birliğiyle, Türkiye'nin yerli ve milli mobilite projelerine mühendislik çözümleri sağlıyoruz.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <span class="tech-badge">AS9100 Sertifikalı</span>
+            <span class="tech-badge">ISO 9001:2015</span>
+            <span class="tech-badge">IATF 16949 Uyumlu</span>
+        </div>
+    </div>
+</header>
+
+<section class="container my-5 py-5" id="vizyon">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h2 class="section-title">Kurumsal Vizyon & Misyon</h2>
+            <p class="text-muted">Avrupa Civata olarak vizyonumuz, bağlantı elemanları sektöründe sağladığımız güvenilirlik ve yüksek iş ahlakımız ile küresel otomotiv ve savunma sanayisinin ilk tercihi olmaktır.</p>
+            <p><strong>Değerlerimiz:</strong></p>
+            <ul class="list-unstyled">
+                <li><i class="text-danger">✓</i> Müşteri Odaklı Yenilikçi Çözümler</li>
+                <li><i class="text-danger">✓</i> AS9100 Havacılık Standartlarında Kalite</li>
+                <li><i class="text-danger">✓</i> Sürdürülebilir Üretim ve Sosyal Sorumluluk</li>
+                <li><i class="text-danger">✓</i> Sıfır Hata Prensibiyle Tam Zamanında Sevkiyat</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <div class="p-4 bg-white rounded shadow-sm">
+                <h4 class="mb-3">İkitelli Operasyon Merkezi</h4>
+                <p class="small text-muted">Lojistik avantajımızla Anadolu Isuzu Çayırova tesislerine kesintisiz tedarik sağlıyoruz.</p>
+                <div class="alert alert-info">
+                    <strong>İletişim:</strong> +90 212 549 11 91
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white py-5" id="projeler">
+    <div class="container">
+        <h2 class="section-title text-center mx-auto mb-5" style="width: fit-content;">Aktif Isuzu Projeleri</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card card-project p-4">
+                    <h3 class="h4 text-danger">CitiVolt</h3>
+                    <p class="small text-muted">12m Tam Elektrikli Otobüs</p>
+                    <hr>
+                    <p>Yüksek voltajlı batarya sistemleri ve şasi bağlantıları için titreşim direnci yüksek, özel kaplamalı 10.9 kalite bağlantı elemanları sağlanmaktadır.</p>
+                    <div class="mt-auto">
+                        <span class="badge bg-dark">Menzil: 480km</span>
+                        <span class="badge bg-secondary">Tork Odaklı</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-project p-4">
+                    <h3 class="h4 text-danger">Big.e</h3>
+                    <p class="small text-muted">Mikro Mobilite & Lojistik</p>
+                    <hr>
+                    <p>Şehir içi son kilometre taşımacılığı için tasarlanan bu "mikro dev" projesinde, hafifletilmiş alaşımlı ve kompakt bağlantı çözümleri sunuyoruz.</p>
+                    <div class="mt-auto">
+                        <span class="badge bg-dark">Şehir İçi</span>
+                        <span class="badge bg-secondary">Hafif Alaşım</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-project p-4">
+                    <h3 class="h4 text-danger">D-Max Avrupa</h3>
+                    <p class="small text-muted">Pick-up İhracat Grubu</p>
+                    <hr>
+                    <p>Avrupa pazarı için Türkiye'de üretilen D-Max modellerinde, zorlu arazi koşullarına dayanıklı, korozyon direnci maksimize edilmiş ürünlerimiz kullanılmaktadır.</p>
+                    <div class="mt-auto">
+                        <span class="badge bg-dark">Off-Road</span>
+                        <span class="badge bg-secondary">EN Standartları</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5 py-5" id="teknik">
+    <h2 class="section-title">Teknik Katalog Özeti</h2>
+    <div class="table-responsive shadow-sm rounded">
+        <table class="table table-custom table-hover bg-white mb-0">
+            <thead>
+                <tr>
+                    <th>Ürün Grubu</th>
+                    <th>Malzeme Spesifikasyonu</th>
+                    <th>Sertlik Sınıfı</th>
+                    <th>Standart Uyumu</th>
+                    <th>Uygulama Alanı</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Şasi Civataları</strong></td>
+                    <td>4140 Alaşımlı Çelik</td>
+                    <td>10.9 / 12.9</td>
+                    <td>DIN 931 / ISO 4014</td>
+                    <td>Isuzu Kamyon & Otobüs Şasisi</td>
+                </tr>
+                <tr>
+                    <td><strong>Batarya Bağlantıları</strong></td>
+                    <td>Düşük Karbonlu Paslanmaz</td>
+                    <td>8.8 Equivalent</td>
+                    <td>Özel Mühendislik</td>
+                    <td>CitiVolt Elektrik Grubu</td>
+                </tr>
+                <tr>
+                    <td><strong>Hafif Bağlantılar</strong></td>
+                    <td>7075 Alüminyum / Titanyum</td>
+                    <td>Varies</td>
+                    <td>AS9100 / EN 9100</td>
+                    <td>Savunma & Mikro Mobilite</td>
+                </tr>
+                <tr>
+                    <td><strong>Korozyon Dirençli Somunlar</strong></td>
+                    <td>Geomet / Dacromet Kaplama</td>
+                    <td>10</td>
+                    <td>ISO 4032</td>
+                    <td>D-Max Alt Takım</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5 class="text-white mb-3">AVRUPA CİVATA</h5>
+                <p>Bağlantı elemanları ve makine üretiminde 20 yılı aşkın tecrübe, AS9100 havacılık disipliniyle birleşiyor.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="text-white mb-3">Hızlı Bağlantılar</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none text-muted">KOSGEB İDR Raporu</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Kalite Sertifikalarımız</a></li>
+                    <li><a href="https://www.instagram.com/avrupacivata/" class="text-decoration-none text-muted">Instagram'da Takip Et</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="text-white mb-3">İletişim</h5>
+                <p class="text-muted">
+                    İkitelli OSB, Başakşehir/İstanbul<br>
+                    T: +90 212 549 11 91<br>
+                    E: info@avrupacivatamakina.com
+                </p>
+            </div>
+        </div>
+        <hr class="bg-secondary">
+        <div class="text-center small">
+            &copy; 2024 Avrupa Civata San. ve Tic. Ltd. Şti. | Isuzu-Katalog Projesi Dijital Arayüzü
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
