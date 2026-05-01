@@ -2,31 +2,79 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avrupa Cıvata | Isuzu Stratejik Katalog</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>body { background-color: #0a0c10; color: #cbd5e1; font-family: sans-serif; }</style>
+    <style>
+        body { background-color: #05070a; color: #cbd5e1; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .gradient-text { background: linear-gradient(90deg, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
 </head>
-<body class="p-8">
-    <div class="max-w-4xl mx-auto bg-white/5 p-12 rounded-3xl border border-white/10 shadow-2xl text-center">
-        <i data-lucide="factory" class="mx-auto w-16 h-16 text-blue-500 mb-6"></i>
-        <h1 class="text-5xl font-black text-white italic mb-4 uppercase tracking-tighter">AVRUPA CİVATA</h1>
-        <p class="text-xl text-slate-400 mb-8 italic">Anadolu Isuzu OEM Stratejik Tedarik Dosyası</p>
-        <div class="grid grid-cols-3 gap-4 mb-12">
-            <div class="bg-slate-900 p-6 rounded-xl border border-white/5">
-                <div class="text-blue-500 text-[10px] font-bold uppercase mb-1">TR Sıralama</div>
-                <div class="text-3xl font-black text-white italic">79.</div>
+<body class="p-4 md:p-12">
+    <div class="max-w-5xl mx-auto space-y-8">
+        
+        <div class="glass p-12 rounded-[2.5rem] text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-white to-blue-600"></div>
+            <i data-lucide="factory" class="mx-auto w-16 h-16 text-blue-500 mb-6 opacity-80"></i>
+            <h1 class="text-6xl font-black gradient-text italic mb-2 tracking-tighter">AVRUPA CİVATA</h1>
+            <p class="text-xl text-slate-400 font-light tracking-[0.2em] uppercase italic">Anadolu Isuzu OEM Stratejik Dosyası</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="glass p-8 rounded-3xl text-center">
+                <div class="text-blue-500 text-[10px] font-bold uppercase tracking-widest mb-2">Türkiye Geneli Sıralama</div>
+                <div class="text-4xl font-black text-white italic">79.</div>
             </div>
-            <div class="bg-slate-900 p-6 rounded-xl border border-white/5">
-                <div class="text-green-500 text-[10px] font-bold uppercase mb-1">Büyüme</div>
-                <div class="text-3xl font-black text-white italic">%44</div>
+            <div class="glass p-8 rounded-3xl text-center border-b-2 border-green-500/30">
+                <div class="text-green-500 text-[10px] font-bold uppercase tracking-widest mb-2">Yıllık Büyüme Endeksi</div>
+                <div class="text-4xl font-black text-white italic">%44</div>
             </div>
-            <div class="bg-slate-900 p-6 rounded-xl border border-white/5">
-                <div class="text-amber-500 text-[10px] font-bold uppercase mb-1">Tahsilat</div>
-                <div class="text-3xl font-black text-white italic">40G</div>
+            <div class="glass p-8 rounded-3xl text-center border-b-2 border-amber-500/30">
+                <div class="text-amber-500 text-[10px] font-bold uppercase tracking-widest mb-2">Ortalama Tahsilat Hızı</div>
+                <div class="text-4xl font-black text-white italic">40 GÜN</div>
             </div>
         </div>
-        <p class="text-slate-500 text-[10px] font-mono uppercase tracking-widest italic">Sistem Yayında - OEM Onaylı Altyapı</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass p-8 rounded-[2rem] space-y-6">
+                <div class="flex items-center gap-4">
+                    <i data-lucide="cpu" class="text-blue-400 w-8 h-8"></i>
+                    <h3 class="text-2xl font-bold text-white uppercase italic">Yüksek Kapasite Üretim</h3>
+                </div>
+                <ul class="space-y-4 text-slate-300">
+                    <li class="flex justify-between border-b border-white/5 pb-2">
+                        <span>5.2m CNC İşleme Hattı</span>
+                        <span class="text-blue-400 font-mono">Aktif</span>
+                    </li>
+                    <li class="flex justify-between border-b border-white/5 pb-2">
+                        <span>150 Ton Hidrolik Pres Grubu</span>
+                        <span class="text-blue-400 font-mono">0.01 Hassasiyet</span>
+                    </li>
+                    <li class="flex justify-between border-b border-white/5 pb-2">
+                        <span>KOSGEB Onaylı Ar-Ge Merkezi</span>
+                        <span class="text-blue-400 font-mono">Lisanslı</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glass p-8 rounded-[2rem] bg-gradient-to-br from-blue-900/10 to-transparent">
+                <h3 class="text-2xl font-bold text-white uppercase italic mb-6">OEM İş Birliği Vizyonu</h3>
+                <p class="text-slate-400 leading-relaxed mb-6 italic text-sm">
+                    Anadolu Isuzu'nun 2026 üretim vizyonuna tam uyumlu, JIT (Just-In-Time) tedarik zinciri altyapımızla hata payını sıfıra indiriyoruz. Dijital izlenebilirlik sistemimizle her bir parça üretim anında kayıt altına alınmaktadır.
+                </p>
+                <div class="flex gap-2">
+                    <span class="bg-white/10 px-3 py-1 rounded-full text-[10px] font-bold text-white">ISO 9001</span>
+                    <span class="bg-white/10 px-3 py-1 rounded-full text-[10px] font-bold text-white">IATF 16949</span>
+                    <span class="bg-white/10 px-3 py-1 rounded-full text-[10px] font-bold text-white">OEM READY</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-center text-slate-600 text-[10px] font-mono uppercase tracking-[0.4em] pb-12 italic">
+            Bu belge dijital olarak imzalanmış bir Avrupa Cıvata stratejik dökümanıdır.
+        </p>
     </div>
     <script>lucide.createIcons();</script>
 </body>
