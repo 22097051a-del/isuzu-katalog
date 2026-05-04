@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AVRUPA CİVATA — Stratejik Kapasite Dosyası 2025</title>
 
-<meta name="description" content="Avrupa Cıvata: ISO 9001:2015 onaylı (01-1644-01). 5.2m CNC kapasitesi, ±0.01mm tolerans. Aselsan, Sarsılmaz ve Erdemir için stratejik ağır sanayi tedarikçisi.">
-<meta name="keywords" content="Hassas İmalat, 5.2m CNC, Savunma Sanayi Tedarikçi, Sarsılmaz Silah Sanayi, Erdemir, Yazıcı Demir Çelik, ISO 9001:2015, NSG Çelik, Industry 4.0">
-
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -18,8 +15,8 @@
   --bg3: #18181d;
   --gold: #c9993a;
   --gold2: #e8bb6a;
-  --gold-dim: rgba(201,153,58,0.12);
-  --gold-border: rgba(201,153,58,0.22);
+  --gold-dim: rgba(201,153,58,0.08);
+  --gold-border: rgba(201,153,58,0.2);
   --text: #d4cfc8;
   --text-dim: #7a746c;
   --text-bright: #f0ebe3;
@@ -36,12 +33,11 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  font-weight: 400;
-  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-/* NOISE TEXTURE */
+/* NOISE TEXTURE - CLAUDE SİGNATURE */
 body::before {
   content: '';
   position: fixed;
@@ -57,52 +53,7 @@ body::before {
 .mono { font-family: var(--font-mono); }
 .display { font-family: var(--font-display); }
 .gold { color: var(--gold2); }
-.dim { color: var(--text-dim); }
 .bright { color: var(--text-bright); }
-
-.tag {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  background: var(--gold-dim);
-  border: 1px solid var(--gold-border);
-  padding: 4px 10px;
-  border-radius: 2px;
-}
-
-.label {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: .25em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-}
-
-section { padding: 100px 0; position: relative; z-index: 2; }
-section + section { border-top: 1px solid var(--border); }
-
-h2.section-title {
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .35em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  margin-bottom: 48px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-h2.section-title::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
 
 /* ── HERO ── */
 .hero {
@@ -112,30 +63,11 @@ h2.section-title::after {
   justify-content: center;
   padding: 120px 0 80px;
   position: relative;
-  overflow: hidden;
-  background-image: linear-gradient(to bottom, rgba(10,10,11,0.9), rgba(10,10,11,1)), url('0139bcf3-bcb8-4abd-8e46-83722e7f88b8.jpg');
+  background-image: linear-gradient(to bottom, rgba(10,10,11,0.85), rgba(10,10,11,1)), url('0139bcf3-bcb8-4abd-8e46-83722e7f88b8.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
-
-.hero-grid-line { position: absolute; pointer-events: none; z-index: 1; }
-.hero-grid-line.h { width: 100%; height: 1px; background: rgba(201,153,58,0.1); }
-.hero-grid-line.v { height: 100%; width: 1px; background: rgba(201,153,58,0.1); }
-
-.hero-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: .4em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 32px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  position: relative; z-index: 2;
-}
-.hero-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: .5; }
 
 .hero-name {
   font-family: var(--font-display);
@@ -144,410 +76,276 @@ h2.section-title::after {
   color: var(--text-bright);
   line-height: .92;
   letter-spacing: -.02em;
-  margin-bottom: 8px;
-  position: relative; z-index: 2;
+  margin-bottom: 24px;
 }
-.hero-name span { color: transparent; -webkit-text-stroke: 1px rgba(201,153,58,0.4); }
+.hero-name span { color: transparent; -webkit-text-stroke: 1px rgba(201,153,58,0.5); }
 
-.hero-sub {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: .3em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  margin-bottom: 40px;
-  position: relative; z-index: 2;
-}
-
-.hero-desc {
-  max-width: 600px;
-  color: var(--text-dim);
-  font-size: 14px;
-  line-height: 1.75;
-  margin-bottom: 64px;
-  position: relative; z-index: 2;
-}
+.hero-desc { max-width: 580px; color: var(--text-dim); font-size: 16px; line-height: 1.8; margin-bottom: 64px; }
 
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
   border: 1px solid var(--border);
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative; z-index: 2;
   background: rgba(10,10,11,0.6);
-  backdrop-filter: blur(10px);
-}
-.hero-stat { padding: 28px 24px; border-right: 1px solid var(--border); }
-.hero-stat:last-child { border-right: none; }
-.hero-stat-val { font-family: var(--font-mono); font-size: 16px; font-weight: 700; color: var(--gold2); margin-bottom: 4px; }
-.hero-stat-label { font-size: 10px; color: var(--text-bright); letter-spacing: .06em; text-transform: uppercase;}
-.hero-stat-sub { font-family: var(--font-mono); font-size: 9px; color: var(--text-dim); opacity: .6; margin-top: 4px; }
-
-.glow-orb {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(201,153,58,0.08) 0%, transparent 70%);
-  right: -200px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* ── BUTTONS ── */
-.btn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
-.btn-doc {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  padding: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
   border-radius: 4px;
 }
-.btn-doc:hover { border-color: var(--gold); background: var(--gold-dim); transform: translateY(-3px); }
-.btn-doc-text p { color: var(--text-bright); font-weight: 700; font-size: 14px; margin-bottom: 4px;}
-.btn-doc-text span { color: var(--text-dim); font-size: 10px; text-transform: uppercase; font-family: var(--font-mono); }
+.hero-stat { padding: 32px 24px; border-right: 1px solid var(--border); }
+.hero-stat:last-child { border-right: none; }
+.hero-stat-val { font-family: var(--font-mono); font-size: 18px; font-weight: 700; color: var(--gold2); }
+.hero-stat-label { font-size: 10px; color: var(--text-bright); letter-spacing: .1em; text-transform: uppercase; margin-top: 4px;}
 
-/* ── IDENTITY ── */
-.identity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
-.identity-cell { background: var(--bg2); padding: 28px 32px; }
-.identity-cell.highlight { background: var(--gold-dim); border-top: 2px solid var(--gold); }
-.identity-val { font-family: var(--font-mono); font-size: 14px; font-weight: 700; color: var(--text-bright); margin-top: 8px; }
+/* ── SECTIONS ── */
+section { padding: 100px 0; border-top: 1px solid var(--border); }
 
-/* ── VISION BLOCK ── */
-.vision-block { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 56px; position: relative; overflow: hidden; }
-.vision-block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-.vision-headline { font-family: var(--font-display); font-size: clamp(28px, 4vw, 48px); font-weight: 800; color: var(--text-bright); line-height: 1.15; margin-bottom: 32px; }
+h2.section-title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 56px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+h2.section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
 /* ── MACHINES ── */
-.machine-table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
-.machine-table th { background: var(--bg3); padding: 12px 24px; text-align: left; font-family: var(--font-mono); font-size: 9px; letter-spacing: .25em; text-transform: uppercase; color: var(--text-dim); font-weight: 400; border-bottom: 1px solid var(--border); }
-.machine-table td { padding: 18px 24px; border-bottom: 1px solid var(--border2); font-size: 13px; color: var(--text); }
-.machine-table tr:hover td { background: rgba(201,153,58,0.05); }
-.machine-table .cap { font-family: var(--font-mono); font-weight: 700; font-size: 13px; color: var(--gold2); }
-.machine-table .qty { font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); background: var(--bg3); border: 1px solid var(--border); padding: 3px 8px; border-radius: 2px; }
-.machine-group-header td { background: var(--bg3); padding: 10px 24px; font-family: var(--font-mono); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid var(--border); border-top: 1px solid var(--border); font-weight: 700; }
+.machine-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 40px;
+  border-radius: 4px;
+  margin-bottom: 32px;
+  position: relative;
+}
+.machine-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--gold); }
 
-.spec-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
-.spec-chip { font-family: var(--font-mono); font-size: 10px; color: var(--text-dim); background: var(--bg3); border: 1px solid var(--border); padding: 6px 14px; border-radius: 2px; }
-.spec-chip strong { color: var(--text-bright); }
-
-.machine-summary { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 32px; }
-.machine-summary-cell { background: var(--bg2); padding: 24px 20px; text-align: center; }
-.machine-summary-val { font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--text-bright); line-height: 1; }
-.machine-summary-val.accent { color: var(--gold2); }
+.machine-table { width: 100%; border-collapse: collapse; }
+.machine-table td { padding: 16px 0; border-bottom: 1px solid var(--border2); font-size: 14px; }
+.machine-table tr:last-child td { border-bottom: none; }
+.cap-val { font-family: var(--font-mono); font-weight: 700; color: var(--gold2); }
 
 /* ── PERFORMANCE BARS ── */
-.bar-row { margin-bottom: 24px; }
-.bar-row-top { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 12px; }
-.bar-bg { background: var(--bg3); border-radius: 1px; height: 6px; }
-.bar-fill { height: 100%; border-radius: 1px; background: linear-gradient(90deg, var(--gold), var(--gold2)); width: 0; transition: width 2s cubic-bezier(0.1, 0, 0.2, 1); }
+.bar-container { margin-bottom: 28px; }
+.bar-label { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 13px; }
+.bar-bg { background: var(--bg3); height: 8px; border-radius: 2px; overflow: hidden; }
+.bar-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--gold2)); width: 0; transition: width 2s ease-in-out; }
 
-/* ── RANK TABLE ── */
-.rank-table { width: 100%; border-collapse: collapse; }
-.rank-table th { text-align: left; font-family: var(--font-mono); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-dim); padding: 0 0 12px; border-bottom: 1px solid var(--border); font-weight: 400; }
-.rank-table td { padding: 14px 0; border-bottom: 1px solid var(--border2); font-size: 13px; }
-.rank-num { font-family: var(--font-mono); font-weight: 700; font-size: 14px; color: var(--gold2); }
+/* ── REF GRID ── */
+.ref-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.ref-cell { background: var(--bg2); padding: 40px; text-align: center; transition: all 0.4s ease; }
+.ref-cell:hover { background: var(--gold-dim); transform: scale(1.02); z-index: 10; }
+.ref-name { font-family: var(--font-display); font-size: 18px; font-weight: 800; color: var(--text-bright); margin-bottom: 4px; }
+.ref-tag { font-family: var(--font-mono); font-size: 10px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.2em; }
 
-/* ── QUALITY ── */
-.quality-split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-.quality-list li { list-style: none; display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border2); font-size: 13px; color: var(--text-dim); font-family: var(--font-mono); }
-.quality-list li::before { content: '→'; color: var(--gold); font-size: 11px; margin-top: 2px; }
+/* ── FOOTER ── */
+.footer { padding: 100px 0; background: var(--bg2); border-top: 1px solid var(--border); }
+.contact-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
+.contact-icon { color: var(--gold); margin-top: 4px; }
 
-/* ── SECTORS ── */
-.sector-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
-.sector-cell { background: var(--bg2); padding: 28px; transition: 0.3s; }
-.sector-cell:hover { background: var(--bg3); }
-.sector-name { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--text-bright); margin-bottom: 8px; text-transform: uppercase; }
-.sector-desc { font-size: 11px; color: var(--text-dim); line-height: 1.6; }
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-.reveal { animation: fadeUp .7s ease both; }
+@keyframes reveal { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.reveal { animation: reveal 1s ease both; }
 
 @media (max-width: 768px) {
-  .hero-stats, .btn-grid, .sector-grid, .footer-inner, .identity-grid, .quality-split, .vision-pillars { grid-template-columns: 1fr; }
-  .hero-name { font-size: 52px; }
+  .hero-stats, .ref-grid { grid-template-columns: 1fr; }
+  .hero-name { font-size: 56px; }
 }
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <div class="glow-orb"></div>
-  <div class="hero-grid-line h" style="top:33%"></div>
-  <div class="hero-grid-line h" style="top:66%"></div>
-  <div class="hero-grid-line v" style="left:33%"></div>
-  <div class="hero-grid-line v" style="right:33%"></div>
-
   <div class="wrap">
-    <div class="hero-eyebrow">Strategic Capability Dossier · 2025</div>
+    <div class="hero-eyebrow">Strategic Engineering Dossier · 2025</div>
     <h1 class="hero-name display">AVRUPA<br><span>CİVATA</span></h1>
-    <p class="hero-sub mono">Hassas İmalat &amp; Ağır Sanayi Çözümleri · Adana, Türkiye</p>
+    <p class="hero-sub mono">Global Tier-1 OEM Strategic Partner</p>
     <p class="hero-desc">
-      Yarım asrı aşkın endüstriyel miras, 5,2 metre CNC işleme kapasitesi ve ±0,01 mm tolerans disiplini. Savunma sanayisinden enerji altyapısına, otomotivden ağır makine imalatına — tam izlenebilirlik taahhüdüyle kritik bileşen üretiminde güvenilir çözüm ortağınız.
+      Yarım asırlık endüstriyel miras ve 5.2 metre CNC işleme kapasitesi. Sarsılmaz'dan Erdemir'e, Aselsan'dan Sabancı Grubu'na kadar Türk sanayisinin devlerine <strong>±0,01 mm tolerans</strong> disipliniyle kritik bileşen üreten entegre üretim üssü.
     </p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <div class="hero-stat-val mono">543240</div>
-        <div class="hero-stat-label">Sanayi Sicil No</div>
-        <div class="hero-stat-sub">Vize: 30.04.2027</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-val mono">1.424 T/YIL</div>
-        <div class="hero-stat-label">TOBB Kapasitesi</div>
-        <div class="hero-stat-sub">Belge: 2023/682</div>
-      </div>
-      <div class="hero-stat">
         <div class="hero-stat-val mono">3.000 m²</div>
         <div class="hero-stat-label">Tesis Alanı</div>
-        <div class="hero-stat-sub">1.500 Üretim + 1.500 Rezerve</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val mono">1.424 Ton</div>
+        <div class="hero-stat-label">Yıllık Kapasite</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val mono">01-1644-01</div>
+        <div class="hero-stat-label">ISO 9001 Tescil</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-val mono">±0,01 mm</div>
-        <div class="hero-stat-label">İmalat Hassasiyeti</div>
-        <div class="hero-stat-sub">CMM Kalibrasyonlu</div>
+        <div class="hero-stat-label">Hassasiyet</div>
       </div>
     </div>
   </div>
 </div>
 
 <section class="wrap reveal">
-  <h2 class="section-title">Resmi Dökümanlar & Satınalma Paneli</h2>
-  <div class="btn-grid">
+  <h2 class="section-title">Resmi Onaylar & Satınalma</h2>
+  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px;">
     <a href="#" class="btn-doc">
-      <div class="btn-doc-text"><p>Teknik Katalog 2024</p><span>PDF · 14.5 MB Download</span></div>
-      <i data-lucide="download" style="color:var(--gold);"></i>
+      <div class="btn-doc-text"><p>Teknik Katalog</p><span>PDF · 14.5 MB</span></div>
+      <i data-lucide="download"></i>
     </a>
     <a href="#" class="btn-doc">
-      <div class="btn-doc-text"><p>KOSGEB Performans</p><span>Resmi Finansal Veriler</span></div>
-      <i data-lucide="file-check" style="color:var(--gold);"></i>
+      <div class="btn-doc-text"><p>KOSGEB Raporu</p><span>2024 Audit Data</span></div>
+      <i data-lucide="file-check"></i>
     </a>
     <a href="#" class="btn-doc">
-      <div class="btn-doc-text"><p>Sanayi Sicil Belgesi</p><span>Bakanlık Onaylı (2027)</span></div>
-      <i data-lucide="shield-check" style="color:var(--gold);"></i>
+      <div class="btn-doc-text"><p>Sanayi Sicil</p><span>Vize: 2027</span></div>
+      <i data-lucide="shield-check"></i>
     </a>
-  </div>
-</section>
-
-<section class="wrap reveal">
-  <h2 class="section-title">Kurumsal Kimlik</h2>
-  <div class="identity-grid">
-    <div class="identity-cell">
-      <div class="label">Firma Ünvanı</div>
-      <div class="identity-val" style="font-size:12px;">Avrupa Cıvata Rehabilitasyon Merkezi Sağ.Hiz.Özel Eğt.Ders.İnş.Mak.Eml.Tur.Hay.Yaş.Seb.San.Tic.Ltd.Şti.</div>
-    </div>
-    <div class="identity-cell highlight">
-      <div class="label">Resmi Vergi Numarası</div>
-      <div class="identity-val">1050485920</div>
-    </div>
-    <div class="identity-cell">
-      <div class="label">Kuruluş Tarihi</div>
-      <div class="identity-val">23 Mayıs 2005</div>
-    </div>
-    <div class="identity-cell">
-      <div class="label">Bölge Yetkinliği</div>
-      <div class="identity-val">TR6 — Akdeniz (Seyhan, Adana)</div>
-    </div>
   </div>
 </section>
 
 <section class="wrap reveal">
   <div class="vision-block">
-    <div class="tag" style="margin-bottom:24px;">Vizyon 2030 — Karanlık Fabrika</div>
-    <h3 class="vision-headline display">
-      Türkiye'nin yerli mühendislik gücünü<br>
-      <span class="gold">küresel OEM standartlarında</span> temsil ediyoruz.
-    </h3>
-    <p style="font-size:14px; color:var(--text-dim); max-width:680px; line-height:1.8; margin-bottom:36px;">
-      Nihai vizyonumuz; insan hatasından arındırılmış, otonom ve sürdürülebilir bir üretim ekosistemi olan <strong>"Karanlık Fabrika" (Dark Factory)</strong> protokollerine geçiş yapmaktır. Geleneksel imalat disiplinimizi otonom dijital zekâyla güçlendiriyoruz.
+    <div class="tag" style="margin-bottom:24px;">Vizyon 2030</div>
+    <h3 class="vision-headline display">Geleceğin İmalat Teknolojisi:<br><span class="gold">Karanlık Fabrika</span></h3>
+    <p style="font-size:16px; color:var(--text-dim); max-width:700px; line-height:1.8;">
+      Nihai hedefimiz; insan hatasından arındırılmış, otonom ve sürdürülebilir bir üretim ekosistemi olan <strong>"Karanlık Fabrika" (Dark Factory)</strong> protokollerine geçiş yapmaktır. IoT ve ERP entegrasyonumuzla üretimimizi saniye saniyesine dijital ikizler üzerinden takip ediyoruz.
     </p>
     <div class="vision-pillars">
       <div class="vision-pillar">
-        <div class="vision-pillar-title gold mono">İleri Teknoloji</div>
-        <p class="dim">5.2 metreye kadar büyük gövde ve şasi parçalarının ±0,01 mm toleransla yekpare işlenmesi.</p>
+        <div class="vision-pillar-title">Atoms + Bits</div>
+        <p>Geleneksel ağır sanayi gücünü yapay zeka ve dijital izlenebilirlik ile hibritleştiriyoruz.</p>
       </div>
       <div class="vision-pillar">
-        <div class="vision-pillar-title gold mono">Dijital Şecere</div>
-        <p class="dim">ERP entegrasyonu ve IoT üretim takibiyle siparişten sevkiyata %100 izlenebilirlik.</p>
+        <div class="vision-pillar-title">Tier-1 Disiplini</div>
+        <p>Tüm süreçlerimiz global OEM standartlarında, tam şecere ve 3.1 malzeme sertifikası güvencesindedir.</p>
       </div>
       <div class="vision-pillar">
-        <div class="vision-pillar-title gold mono">Finansal Güç</div>
-        <p class="dim">2024 resmi KOSGEB raporuyla tescillenmiş %44 net satış artışı ve yüksek yatırım kapasitesi.</p>
+        <div class="vision-pillar-title">Sınırsız Ölçek</div>
+        <p>1500m² mevcut üretim ve 1500m² rezerve alanımızla dev projeleriniz için hazırız.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="wrap reveal">
-  <h2 class="section-title">Teknik Envanter &amp; Machining Arsenal</h2>
-  <table class="machine-table">
-    <thead>
-      <tr><th>Üretim Hattı</th><th>Kapasite / Teknik Detay</th><th>Adet</th></tr>
-    </thead>
-    <tbody>
-      <tr style="background:var(--bg3);"><td colspan="3" class="mono gold" style="font-size:10px; padding:10px 24px;">CNC DİK İŞLEME MERKEZLERİ</td></tr>
-      <tr><td><strong class="bright">Çift Kolonlu CNC Dik İşleme</strong></td><td><span class="cap">5.200 × 2.700 × 2.000 mm</span> (7 Metreye Kadar Yekpare İşleme)</td><td class="mono">2</td></tr>
-      <tr><td>CNC Dik İşleme Merkezi</td><td><span class="cap">3.200 mm</span> Yüksek Rijitlik Hattı</td><td class="mono">1</td></tr>
-      <tr><td>CNC Dik İşleme Merkezi</td><td><span class="cap">1.600 mm</span> Seri Üretim Hattı</td><td class="mono">3</td></tr>
-      <tr><td>CNC Dik İşleme Merkezi</td><td><span class="cap">1.200 mm</span> Hızlı Prototipleme</td><td class="mono">1</td></tr>
-      <tr style="background:var(--bg3);"><td colspan="3" class="mono gold" style="font-size:10px; padding:10px 24px;">CNC TORNALAMA &amp; FORM VERME</td></tr>
-      <tr><td>Yüksek Torklu CNC Torna</td><td><span class="cap">Ø400 × 2.200 mm</span> Miller ve Dev Kovanlar</td><td class="mono">4</td></tr>
-      <tr><td>Friksiyon Pres Hattı</td><td><span class="cap">150 TON</span> Sıcak Dövme Kapasitesi</td><td class="mono">1</td></tr>
-      <tr><td>Hidrolik Pres</td><td><span class="cap">60 TON</span> Hassas Form Verme</td><td class="mono">1</td></tr>
-    </tbody>
-  </table>
-  <div style="margin-top:24px; padding:20px; background:var(--gold-dim); border:1px solid var(--gold-border); border-radius:4px; font-size:12px; color:var(--text-dim);">
-    <strong class="gold">MÜHENDİSLİK NOTU:</strong> Kendi bünyemizde tasarladığımız özel fikstürleme sistemleri sayesinde ±0,01 mm tolerans disiplini tüm operasyonlarda standarttır.
+  <h2 class="section-title">Machining Arsenal</h2>
+  <div class="machine-card">
+    <h4 class="display gold" style="font-size:24px; margin-bottom:32px; text-transform:uppercase; letter-spacing:0.1em;">CNC İşleme & Tornalama Hattı</h4>
+    <table class="machine-table">
+      <tr><td><strong class="bright">Çift Kolonlu CNC Dik İşleme</strong></td><td class="cap-val text-right">5.200 × 2.700 × 2.000 mm</td><td class="text-right mono">2 Adet</td></tr>
+      <tr><td colspan="3" style="padding:12px 0;"><p style="font-size:12px; color:var(--gold); border: 1px solid var(--gold-border); padding:10px; background: var(--gold-dim);"><strong>TEKNİK ÜSTÜNLÜK:</strong> Özel fikstürleme ile <strong>7 METREYE KADAR</strong> yekpare işleme kapasitesi.</p></td></tr>
+      <tr><td>CNC Dik İşleme Merkezi</td><td class="cap-val text-right">3.200 mm</td><td class="text-right mono">1 Adet</td></tr>
+      <tr><td>CNC Dik İşleme Merkezi</td><td class="cap-val text-right">1.600 mm</td><td class="text-right mono">3 Adet</td></tr>
+      <tr><td>Yüksek Torklu CNC Torna</td><td class="cap-val text-right">Ø400 × 2.200 mm</td><td class="text-right mono">4 Adet</td></tr>
+      <tr><td>Friksiyon Pres Hattı</td><td class="cap-val text-right">150 TON</td><td class="text-right mono">1 Adet</td></tr>
+    </table>
+  </div>
+  
+  <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:32px;">
+    <span class="tag">CMM Ölçüm</span> <span class="tag">3.1 Sertifikasyon</span> <span class="tag">NSG Çelik</span> <span class="tag">Suat Çelik</span> <span class="tag">7/24 Üretim</span>
   </div>
 </section>
 
 <section class="wrap reveal">
-  <h2 class="section-title">Resmi Performans Analizi (KOSGEB 2024)</h2>
-  <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:60px;">
+  <h2 class="section-title">KOSGEB 2024 Resmi Verileri</h2>
+  <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:80px; align-items: center;">
     <div>
-      <div class="bar-row">
-        <div class="bar-row-top"><span>Net Satış Artışı (Büyüme)</span><span class="mono gold">%44 <span class="dim">/ Sektör %35</span></span></div>
-        <div class="bar-bg"><div class="bar-fill" data-width="88%"></div></div>
+      <div class="bar-container">
+        <div class="bar-label"><span>Net Satış Artışı (Büyüme)</span><span class="gold mono">%44</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:88%;"></div></div>
       </div>
-      <div class="bar-row">
-        <div class="bar-row-top"><span>Aktif Büyüklük Artışı</span><span class="mono gold">%37 <span class="dim">/ Sektör %24</span></span></div>
-        <div class="bar-bg"><div class="bar-fill" data-width="74%"></div></div>
+      <div class="bar-container">
+        <div class="bar-label"><span>Kapasite Kullanım Oranı</span><span class="gold mono">%77,2</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:77%;"></div></div>
       </div>
-      <div class="bar-row">
-        <div class="bar-row-top"><span>Kapasite Kullanım Oranı</span><span class="mono gold">%77,2 <span class="dim">/ Sektör %71</span></span></div>
-        <div class="bar-bg"><div class="bar-fill" data-width="77%"></div></div>
+      <div class="bar-container">
+        <div class="bar-label"><span>Alacak Tahsil Hızı (40 Gün)</span><span class="gold mono">%41 Daha Hızlı</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:92%;"></div></div>
       </div>
     </div>
-    <div style="background:var(--bg2); padding:32px; border-radius:4px; border:1px solid var(--border);">
-      <div class="tag" style="margin-bottom:20px;">Ulusal Sıralama</div>
-      <p class="dim" style="font-size:12px; margin-bottom:20px;">Türkiye genelinde 561 tescilli işletme arasında:</p>
-      <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--border2);"><span class="mono">Aktif Büyüklük</span><span class="gold">79 / 561</span></div>
-      <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--border2);"><span class="mono">Tahsilat Hızı</span><span class="gold">40 GÜN</span></div>
-      <div style="display:flex; justify-content:space-between; padding:12px 0;"><span class="mono">İşgücü Verimliliği</span><span class="gold">%36 ↑</span></div>
+    <div style="background:var(--bg2); padding:40px; border:1px solid var(--border); border-radius:4px; text-align:center;">
+        <div class="display gold" style="font-size:64px; line-height:1;">79.</div>
+        <p class="mono" style="font-size:12px; margin-top:10px; text-transform:uppercase; letter-spacing:0.2em;">Türkiye Sıralaması</p>
+        <p class="dim" style="font-size:11px; margin-top:20px;">561 tescilli yivli bağlantı elemanı üreticisi arasında aktif büyüklükte liderler arasındayız.</p>
     </div>
   </div>
 </section>
 
 <section class="wrap reveal">
-  <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:48px; align-items: start;">
-    <div>
-      <h2 class="display" style="font-size:32px; color:var(--text-bright); margin-bottom:24px;">Quality & Traceability</h2>
-      <p style="font-size:14px; color:var(--text-dim); line-height:1.75; margin-bottom:32px;">
-        Hammadde girişinden sevkiyata kadar her aşama <strong>üç boyutlu CMM ölçüm sistemi</strong> ve mühendislik denetimiyle kontrol altındadır. Savunma sanayi projelerinde <strong>3.1 Malzeme Sertifikası</strong> ile tam şecerelendirilmiş üretim yapılmaktadır.
-      </p>
-      <div style="padding:24px; background:var(--bg2); border-left:4px solid var(--gold); border-radius: 0 4px 4px 0;">
-        <p class="mono bright uppercase" style="font-size:12px; letter-spacing: 0.1em; margin-bottom:12px;">Hammadde Güvencesi:</p>
-        <p style="font-size:13px; color:var(--text-dim);">Çelik hammadde yalnızca <strong>NSG</strong> ve <strong>Suat Çelik</strong> gibi onaylı Tier-1 tedarikçilerden temin edilmekte; her sevkiyat hassas ölçüm raporuyla tescil edilmektedir.</p>
-      </div>
-    </div>
-    <div style="background:var(--bg2); border:1px solid var(--border); padding:40px; border-radius:4px; border-top: 4px solid purple;">
-        <div class="tag" style="background:purple; color:white; border:none; margin-bottom:20px;">ISO Certified</div>
-        <p class="mono bright" style="font-size:18px; margin-bottom:8px;">ISO 9001:2015</p>
-        <p class="mono gold" style="font-size:14px; margin-bottom:24px;">No: 01-1644-01</p>
-        <div style="display:flex; align-items:center; gap:8px; background:rgba(74,222,128,0.05); padding:12px; border-radius:2px; border:1px solid rgba(74,222,128,0.2);">
-            <div style="width:8px; height:8px; border-radius:50%; background:#4ade80;"></div>
-            <span class="mono" style="font-size:10px; color:#4ade80; letter-spacing: 0.1em;">TÜRKAK TBDS SİSTEMİNDE AKTİF</span>
-        </div>
-    </div>
+  <h2 class="section-title">İş Ortakları & Referans Ağı</h2>
+  <div class="ref-grid">
+    <div class="ref-cell"><div class="ref-name">Sarsılmaz Silah</div><div class="ref-tag">Savunma Sanayi</div></div>
+    <div class="ref-cell"><div class="ref-name">Erdemir</div><div class="ref-tag">Demir Çelik</div></div>
+    <div class="ref-cell"><div class="ref-name">Yazıcı Demir Çelik</div><div class="ref-tag">Ağır Sanayi</div></div>
+    <div class="ref-cell"><div class="ref-name">Sabancı Holding</div><div class="ref-tag">Holding</div></div>
+    <div class="ref-cell"><div class="ref-name">Oyak Grubu</div><div class="ref-sector">Holding</div></div>
+    <div class="ref-cell"><div class="ref-name">SASA</div><div class="ref-tag">Petrokimya</div></div>
   </div>
-</section>
-
-<section class="wrap reveal">
-  <h2 class="section-title">İş Ortakları &amp; Referans Ağı</h2>
-  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-    <div class="bg-white/[0.03] p-6 rounded-2xl text-center border border-white/10 hover:border-[#e8bb6a]/50 hover:bg-[#c9993a]/10 transition-all group">
-        <p class="text-white font-black text-sm uppercase tracking-widest group-hover:text-[#e8bb6a] transition-colors">Sabancı Holding</p>
-        <p class="text-slate-500 text-[10px] mt-2 font-mono uppercase">Holding</p>
-    </div>
-    <div class="bg-white/[0.03] p-6 rounded-2xl text-center border border-white/10 hover:border-[#e8bb6a]/50 hover:bg-[#c9993a]/10 transition-all group">
-        <p class="text-white font-black text-sm uppercase tracking-widest group-hover:text-[#e8bb6a] transition-colors">Oyak Grubu</p>
-        <p class="text-slate-500 text-[10px] mt-2 font-mono uppercase">Holding</p>
-    </div>
-    <div class="bg-white/[0.03] p-6 rounded-2xl text-center border border-white/10 hover:border-[#e8bb6a]/50 hover:bg-[#c9993a]/10 transition-all group">
-        <p class="text-white font-black text-sm uppercase tracking-widest group-hover:text-[#e8bb6a] transition-colors">Erdemir</p>
-        <p class="text-slate-500 text-[10px] mt-2 font-mono uppercase">Demir Çelik</p>
-    </div>
-    <div class="bg-white/[0.03] p-6 rounded-2xl text-center border border-white/10 hover:border-[#e8bb6a]/50 hover:bg-[#c9993a]/10 transition-all group">
-        <p class="text-white font-black text-sm uppercase tracking-widest group-hover:text-[#e8bb6a] transition-colors">Yazıcı Demir Çelik</p>
-        <p class="text-slate-500 text-[10px] mt-2 font-mono uppercase">Demir Çelik</p>
-    </div>
-    <div class="bg-white/[0.03] p-6 rounded-2xl text-center border border-white/10 hover:border-[#e8bb6a]/50 hover:bg-[#c9993a]/10 transition-all group">
-        <p class="text-white font-black text-sm uppercase tracking-widest group-hover:text-[#e8bb6a] transition-colors">Sarsılmaz Silah</p>
-        <p class="text-slate-500 text-[10px] mt-2 font-mono uppercase">Savunma Sanayi</p>
-    </div>
-    <div class="bg-white/[0.03] p-6 rounded-2xl text-center border border-white/10 hover:border-[#e8bb6a]/50 hover:bg-[#c9993a]/10 transition-all group">
-        <p class="text-white font-black text-sm uppercase tracking-widest group-hover:text-[#e8bb6a] transition-colors">Anadolu Isuzu</p>
-        <p class="text-slate-500 text-[10px] mt-2 font-mono uppercase">OEM Onaylı</p>
-    </div>
-  </div>
-
-  <div style="background:var(--bg2); padding:60px; border-radius:4px; text-align:center; border:1px solid var(--border); margin-top:40px; position: relative; overflow: hidden;">
-    <p class="label" style="margin-bottom:24px;">Global OEM (Tier-1) Stratejik Tedarik Hedeflerimiz</p>
-    <div class="display gold" style="font-size:clamp(20px, 4vw, 42px); font-weight:800; letter-spacing:0.1em; line-height:1.4;">
+  
+  <div style="margin-top:64px; background:var(--bg2); padding:60px; border:1px solid var(--gold-border); text-align:center; border-radius:4px;">
+    <p class="label" style="margin-bottom:24px;">Global OEM Stratejik Hedeflerimiz</p>
+    <div class="display gold" style="font-size:clamp(20px, 3vw, 42px); font-weight:800; letter-spacing:0.1em; line-height:1.5;">
         ASELSAN • ANADOLU ISUZU • TEMSA<br>OTOKAR • BMC • ROKETSAN
     </div>
-    <p class="mono dim" style="font-size:10px; margin-top:32px; letter-spacing:0.3em; text-transform: uppercase;">Stratejik Partner &amp; Onaylı Üretim Üssü</p>
   </div>
 </section>
 
 <section class="wrap reveal">
-    <h2 class="section-title">Hizmet Verdiğimiz Sektörler</h2>
+    <h2 class="section-title">Hizmet Alanlarımız</h2>
     <div class="sector-grid">
-      <div class="sector-cell"><div class="sector-name">Savunma Sanayi</div><p class="sector-desc">Kritik gövde ve mekanizma parçaları.</p></div>
-      <div class="sector-cell"><div class="sector-name">Otomotiv OEM</div><p class="sector-desc">Şasi ve motor bağlantı bileşenleri.</p></div>
-      <div class="sector-cell"><div class="sector-name">Liman İşletmeleri</div><p class="sector-desc">Dev vinçler ve konteyner ekipman parçaları.</p></div>
-      <div class="sector-cell"><div class="sector-name">Maden &amp; Kırma</div><p class="sector-desc">Konkasör ve ağır iş makinesi yedekleri.</p></div>
-      <div class="sector-cell"><div class="sector-name">Rafineriler</div><p class="sector-desc">Yüksek basınç flanş ve özel conta grupları.</p></div>
-      <div class="sector-cell"><div class="sector-name">Makine İmalatı</div><p class="sector-desc">Özel tasarım miller ve yüksek torklu akslar.</p></div>
-      <div class="sector-cell"><div class="sector-name">Enerji &amp; Baraj</div><p class="sector-desc">Türbin bileşenleri ve ağır yük ankraj sistemleri.</p></div>
-      <div class="sector-cell"><div class="sector-name">Tersaneler</div><p class="sector-desc">Denizcilik standartlarında korozyon dirençli imalat.</p></div>
+      <div class="sector-cell"><div class="sector-name">Rafineriler</div><p class="sector-desc">Yüksek basınç flanş ve bağlantı sistemleri.</p></div>
+      <div class="sector-cell"><div class="sector-name">Liman İşletmeleri</div><p class="sector-desc">Ağır hizmet vinç ve ekipman yedekleri.</p></div>
+      <div class="sector-cell"><div class="sector-name">Maden & Kırma</div><p class="sector-desc">Konkasör ve iş makinesi aşınma parçaları.</p></div>
+      <div class="sector-cell"><div class="sector-name">Tersaneler</div><p class="sector-desc">Denizcilik standartlarında özel üretimler.</p></div>
     </div>
 </section>
 
-<footer class="footer wrap reveal">
+<footer class="footer wrap">
   <div class="footer-inner">
     <div>
       <div class="footer-name display">Hakan Burak<br>Parlakkân</div>
       <div class="footer-title">Mechanical Engineer / General Manager</div>
-      <p style="font-size:13px; color:var(--text-dim); max-width: 320px; margin-top: 20px;">
-        Teknik kapasite dökümanları ve proje bazlı işbirliği için doğrudan iletişime geçebilirsiniz.
+      <p style="font-size:13px; color:var(--text-dim); max-width:320px; margin-top:24px;">
+        Yüksek hassasiyetli projeler ve Tier-1 tedarik süreçleri için doğrudan iletişim hattı.
       </p>
     </div>
-    <ul class="contact-list">
-      <li><i data-lucide="map-pin" style="color:var(--gold); width:16px;"></i> Yeşiloba Mah. 46251 Sok. No:4/A Seyhan/Adana</li>
-      <li><i data-lucide="mail" style="color:var(--gold); width:16px;"></i> info@avrupacivata.com</li>
-      <li><i data-lucide="phone" style="color:var(--gold); width:16px;"></i> +90 (322) 322 52 14</li>
-      <li><i data-lucide="instagram" style="color:var(--gold); width:16px;"></i> <a href="https://www.instagram.com/avrupacivatamakineyedekparca/" target="_blank" style="color:var(--gold2); text-decoration:none;">@avrupacivatamakine</a></li>
-    </ul>
+    <div>
+      <div class="contact-item">
+        <i data-lucide="map-pin" class="contact-icon"></i>
+        <p class="mono" style="font-size:13px;">Yeşiloba Mah. 46251 Sok. No:4/A<br>Seyhan / Adana, Türkiye</p>
+      </div>
+      <div class="contact-item">
+        <i data-lucide="mail" class="contact-icon"></i>
+        <p class="mono" style="font-size:13px;">info@avrupacivata.com<br>avrupacivata_01@hotmail.com</p>
+      </div>
+      <div class="contact-item">
+        <i data-lucide="phone" class="contact-icon"></i>
+        <p class="mono" style="font-size:13px;">+90 (322) 322 52 14<br>+90 (545) 322 52 14</p>
+      </div>
+      <div class="contact-item">
+        <i data-lucide="instagram" class="contact-icon"></i>
+        <a href="https://www.instagram.com/avrupacivatamakineyedekparca/" target="_blank" class="mono gold" style="font-size:13px; text-decoration:none;">@avrupacivatamakine</a>
+      </div>
+    </div>
   </div>
-  <div class="footer-bottom">
-    Precision Fasteners & Machining Center · 50+ Years Legacy · Seyhan, Adana
+  <div style="margin-top:80px; text-align:center; font-family:var(--font-mono); font-size:10px; color:var(--text-dim); opacity:0.4; letter-spacing:0.4em; text-transform:uppercase;">
+    Precision Fasteners & Machining Base · 50+ Years Legacy
   </div>
 </footer>
 
 <script>
 lucide.createIcons();
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      if (entry.target.classList.contains('bar-fill')) {
-        entry.target.style.width = entry.target.getAttribute('data-width');
-      }
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.bar-fill').forEach(el => observer.observe(el));
+// Animasyon tetikleyici
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.bar-fill').forEach(bar => {
+      bar.style.width = bar.parentElement.previousElementSibling.querySelector('.mono').innerText.includes('%') 
+        ? bar.parentElement.previousElementSibling.querySelector('.mono').innerText.replace('%','') + '%'
+        : '90%';
+    });
+  }, 500);
+});
 </script>
 
 </body>
