@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Avrupa Cıvata: ISO 9001:2015 Belgeli (01-1644-01). 5.2m CNC kapasitesi, ±0.01mm tolerans disiplini. Aselsan, Isuzu ve Temsa için stratejik çözüm ortağı.">
-    <meta name="keywords" content="Savunma Sanayi Tedarikçi, CNC İşleme Adana, ISO 9001:2015 01-1644-01, Karanlık Fabrika Vizyonu, Industry 4.0 IoT">
+    <meta name="description" content="Avrupa Cıvata: ISO 9001:2015 onaylı (01-1644-01). 5.2m CNC kapasitesi, ±0.01mm tolerans. Aselsan, Temsa ve Isuzu için stratejik ağır sanayi tedarikçisi.">
+    <meta name="keywords" content="Hassas İmalat, 5.2m CNC, Savunma Sanayi Tedarikçi, ISO 9001:2015, NSG Çelik, Suat Çelik, Industry 4.0, Karanlık Fabrika Vizyonu">
     
     <title>Avrupa Cıvata | Stratejik Kapasite & Teknik Mühendislik Dosyası</title>
     
@@ -18,17 +18,24 @@
         * { margin:0; padding:0; box-sizing:border-box; }
         body { background:var(--dark); color:#cbd5e1; font-family:'Space Grotesk',sans-serif; scroll-behavior:smooth; overflow-x: hidden; }
         .mono { font-family:'JetBrains Mono',monospace; }
-        .glass-panel { background:var(--surface); backdrop-filter:blur(24px); border:1px solid var(--border); border-radius:2.5rem; }
+        
+        /* Claude-Style Glassmorphism */
+        .glass-panel { background:var(--surface); backdrop-filter:blur(24px); border:1px solid var(--border); border-radius:2rem; }
         .glass-glow { background:var(--surface); backdrop-filter:blur(24px); border:1px solid rgba(59,130,246,0.2); border-radius:2.5rem; box-shadow:0 0 80px -20px rgba(59,130,246,0.15); }
+        
         .stat-card { border-top:3px solid var(--accent); transition:all .4s cubic-bezier(.4,0,.2,1); }
         .stat-card:hover { transform:translateY(-8px); background:var(--glow); border-top-width:5px; }
-        .machine-row { transition:all .3s ease; border-bottom:1px solid var(--border); padding:1.25rem 0; }
+        
+        .machine-row { transition:all .3s ease; border-bottom:1px solid var(--border); padding:1.5rem 0; }
         .machine-row:hover { background:rgba(59,130,246,0.05); border-radius:1rem; padding-left:1rem; border-left:4px solid var(--accent); }
+        
         .badge { background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.3); color:#60a5fa; padding:6px 16px; border-radius:99px; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; }
-        .bar-bg { background:rgba(255,255,255,0.05); border-radius:99px; height:8px; overflow:hidden; }
+        .bar-bg { background:rgba(255,255,255,0.05); border-radius:99px; height:10px; overflow:hidden; }
         .bar-fill { height:100%; border-radius:99px; background:linear-gradient(90deg,#2563eb,#60a5fa); transition: width 1.5s ease-in-out; }
+        
         .btn-action { background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.3); transition:all 0.3s; cursor: pointer; }
         .btn-action:hover { background:var(--accent); color:white; transform: translateY(-3px); box-shadow:0 10px 20px -10px rgba(59,130,246,0.5); }
+        
         @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
         .reveal { animation:fadeUp 0.8s ease both; }
     </style>
@@ -38,216 +45,191 @@
 
     <header class="glass-glow p-12 sm:p-20 text-center relative overflow-hidden reveal">
         <div class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-70"></div>
-        <div class="flex justify-center mb-6 text-blue-500 opacity-90"><i data-lucide="shield-check" class="w-16 h-16"></i></div>
+        <div class="flex justify-center mb-6 text-blue-500 opacity-90"><i data-lucide="shield-check" class="w-20 h-20"></i></div>
         <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-tighter text-white leading-none italic mb-4 uppercase">AVRUPA CİVATA</h1>
-        <p class="text-lg sm:text-xl text-blue-400 font-bold tracking-[0.4em] uppercase">Global OEM Stratejik Çözüm Ortağı</p>
-        <p class="text-slate-400 text-base sm:text-lg mt-8 max-w-4xl mx-auto leading-relaxed italic">
-            Yarım asrı aşkın endüstriyel miras, 5.2 metrelik dev CNC işleme kapasitesi ve ±0,01 mm tolerans disiplini ile savunma, otomotiv, enerji ve ağır sanayi sektörlerine kritik bileşen üreten entegre teknoloji üssü.
+        <p class="text-lg sm:text-2xl text-blue-400 font-bold tracking-[0.4em] uppercase">Global OEM Stratejik Çözüm Ortağı</p>
+        <p class="text-slate-400 text-base sm:text-xl mt-8 max-w-5xl mx-auto leading-relaxed italic">
+            Yarım asrı aşkın endüstriyel miras, 5.2 metrelik dev CNC işleme kapasitesi ve ±0,01 mm tolerans disiplini ile savunma, otomotiv, enerji ve ağır sanayi sektörlerine kritik bileşen üreten Türkiye'nin teknoloji üssü.
         </p>
         
         <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8 pt-10 border-t border-white/10 text-left">
-            <div><p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Sanayi Sicil No</p><p class="text-white mono text-lg mt-1">543240</p><p class="text-blue-500 text-[10px] mt-1 font-bold">Vize: 2027</p></div>
-            <div><p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">TOBB Kapasite</p><p class="text-white mono text-lg mt-1">1.424 Ton / Yıl</p></div>
-            <div><p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Kuruluş</p><p class="text-white mono text-lg mt-1">2005 (Adana)</p></div>
-            <div><p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Genişleme Alanı</p><p class="text-white mono text-lg text-blue-400">3.000 m²</p><p class="text-[9px] text-blue-500 font-bold">1500m² Üretim + 1500m² Rezerve</p></div>
+            <div><p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Sanayi Sicil No</p><p class="text-white mono text-xl mt-1">543240</p><p class="text-blue-500 text-[10px] mt-1 font-bold italic underline">Vize: 30.04.2027</p></div>
+            <div><p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Yıllık TOBB Kapasite</p><p class="text-white mono text-xl mt-1">1.424 Ton</p><p class="text-slate-500 text-[10px] mt-1 uppercase">Sürekli Seri Üretim</p></div>
+            <div><p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Sertifikasyon</p><p class="text-white mono text-xl mt-1">ISO 9001:2015</p><p class="text-purple-500 text-[10px] mt-1 font-bold">01-1644-01 Verified</p></div>
+            <div><p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Tesis Alanı (Kapalı)</p><p class="text-white mono text-xl mt-1">3.000 m²</p><p class="text-blue-500 text-[10px] mt-1 font-bold tracking-wider uppercase">1500m² Üretim + 1500m² Rezerve</p></div>
         </div>
     </header>
 
     <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 no-print reveal">
-        <a href="#" class="glass-panel p-6 flex items-center justify-between btn-action">
-            <div><p class="text-white font-bold text-sm">Teknik Katalog</p><p class="text-slate-500 text-[10px] mt-1 uppercase">PDF İndir • 14.5 MB</p></div>
-            <i data-lucide="download" class="w-5 h-5 text-blue-400"></i>
+        <a href="#" class="glass-panel p-8 flex items-center justify-between btn-action">
+            <div><p class="text-white font-bold text-base">Teknik Katalog</p><p class="text-slate-500 text-xs mt-1 uppercase">PDF Download • 14.5 MB</p></div>
+            <i data-lucide="download" class="w-6 h-6 text-blue-400"></i>
         </a>
-        <a href="#" class="glass-panel p-6 flex items-center justify-between btn-action">
-            <div><p class="text-white font-bold text-sm">KOSGEB Raporu</p><p class="text-slate-500 text-[10px] mt-1 uppercase">Resmi Finansal Veri</p></div>
-            <i data-lucide="file-text" class="w-5 h-5 text-blue-400"></i>
+        <a href="#" class="glass-panel p-8 flex items-center justify-between btn-action">
+            <div><p class="text-white font-bold text-base">KOSGEB Raporu</p><p class="text-slate-500 text-xs mt-1 uppercase">Resmi Finansal Veriler</p></div>
+            <i data-lucide="file-text" class="w-6 h-6 text-blue-400"></i>
         </a>
-        <a href="#" class="glass-panel p-6 flex items-center justify-between btn-action">
-            <div><p class="text-white font-bold text-sm">Sanayi Sicil</p><p class="text-slate-500 text-[10px] mt-1 uppercase">Bakanlık Onaylı</p></div>
-            <i data-lucide="shield" class="w-5 h-5 text-blue-400"></i>
+        <a href="#" class="glass-panel p-8 flex items-center justify-between btn-action">
+            <div><p class="text-white font-bold text-base">Sanayi Sicil</p><p class="text-slate-500 text-xs mt-1 uppercase">Bakanlık Onaylı Belge</p></div>
+            <i data-lucide="shield" class="w-6 h-6 text-blue-400"></i>
         </a>
-        <div onclick="window.print()" class="glass-panel p-6 flex items-center justify-between btn-action bg-blue-600/10 border-blue-500/50">
-            <div><p class="text-blue-400 font-bold text-sm">Dosyayı PDF Yap</p><p class="text-blue-500/70 text-[10px] mt-1 uppercase">Yazdır / Kaydet</p></div>
-            <i data-lucide="printer" class="w-5 h-5 text-blue-400"></i>
+        <div onclick="window.print()" class="glass-panel p-8 flex items-center justify-between btn-action bg-blue-600/10 border-blue-500/50">
+            <div><p class="text-blue-400 font-bold text-base">Dosyayı PDF Yap</p><p class="text-blue-500/70 text-xs mt-1 uppercase">Dossier Printer</p></div>
+            <i data-lucide="printer" class="w-6 h-6 text-blue-400"></i>
         </div>
     </section>
 
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal">
         <div class="glass-panel p-12 space-y-6">
-            <h3 class="text-2xl font-black text-white flex items-center gap-4 uppercase italic tracking-tight border-b border-white/10 pb-4"><i data-lucide="target" class="text-blue-500 w-8 h-8"></i> Kurumsal Misyon</h3>
+            <h3 class="text-3xl font-black text-white flex items-center gap-4 uppercase italic tracking-tight border-b border-white/10 pb-4"><i data-lucide="target" class="text-blue-500 w-8 h-8"></i> Mühendislik Misyonumuz</h3>
             <p class="text-slate-400 text-lg leading-relaxed">
-                50 yıllık endüstriyel disiplinimizi ileri teknoloji CNC altyapımızla birleştirerek; global devlere "sıfır hata" ve "tam izlenebilirlik" prensibiyle çözüm sunmak.
+                50 yıllık endüstriyel disiplinimizi ileri teknoloji CNC altyapımızla birleştirerek; otomotiv, savunma ve enerji sektörlerindeki global devlere <strong>"sıfır hata"</strong> ve <strong>"tam izlenebilirlik"</strong> prensibiyle çözüm sunuyoruz. Geleneksel imalatın gücünü mühendislik zekasıyla perçinliyoruz.
             </p>
-            <div class="pt-4 space-y-3 text-slate-400 text-sm border-t border-white/5">
-                <div class="flex items-center gap-3 text-blue-400 font-mono text-xs"><i data-lucide="cpu" class="w-4 h-4"></i> ERP & Bulut Tabanlı Üretim Entegrasyonu</div>
-                <div class="flex items-center gap-3 text-blue-400 font-mono text-xs"><i data-lucide="line-chart" class="w-4 h-4"></i> IoT Üretim Takibi & Anlık Veri Raporlama</div>
+            <div class="pt-6 space-y-4 text-slate-400 text-sm border-t border-white/5">
+                <div class="flex items-start gap-4"><i data-lucide="cpu" class="text-blue-500 w-6 h-6 shrink-0"></i> <p><strong>Bulut Tabanlı ERP Entegrasyonu:</strong> Hammadde girişinden sevkiyata kadar tüm süreçler dijital olarak izlenebilir durumdadır.</p></div>
+                <div class="flex items-start gap-4"><i data-lucide="line-chart" class="text-blue-500 w-6 h-6 shrink-0"></i> <p><strong>IoT Üretim Takibi:</strong> Tezgahlarımızdan alınan anlık verilerle üretim verimliliği ve toleranslar saniyesi saniyesine raporlanır.</p></div>
             </div>
         </div>
         <div class="glass-panel p-12 space-y-6 border-l-4 border-blue-600 bg-blue-900/5">
-            <h3 class="text-2xl font-black text-white flex items-center gap-4 uppercase italic tracking-tight border-b border-white/10 pb-4"><i data-lucide="eye" class="text-blue-500 w-8 h-8"></i> Vizyon 2030: Karanlık Fabrika</h3>
+            <h3 class="text-3xl font-black text-white flex items-center gap-4 uppercase italic tracking-tight border-b border-white/10 pb-4"><i data-lucide="eye" class="text-blue-500 w-8 h-8"></i> Vizyon 2030: Karanlık Fabrika</h3>
             <p class="text-slate-400 text-lg leading-relaxed">
-                Nihai hedefimiz; savunma ve otomotiv sektörü için insan hatasından arındırılmış, otonom bir üretim ekosistemi olan <strong>"Karanlık Fabrika" (Dark Factory)</strong> protokollerine geçiş yapmaktır.
+                Türkiye'nin yerli mühendislik gücünü küresel OEM standartlarında temsil ederek, Avrupa ve Orta Doğu pazarında "Stratejik Tier-1 Tedarikçi" konumuna erişmek. Nihai vizyonumuz; insan hatasından arındırılmış, otonom ve sürdürülebilir bir üretim ekosistemi olan <strong>"Karanlık Fabrika" (Dark Factory)</strong> protokollerine geçiş yapmaktır.
             </p>
-            <div class="flex flex-wrap gap-2 pt-2">
-                <span class="badge">Endüstri 4.0</span>
+            <div class="flex flex-wrap gap-3 pt-4">
+                <span class="badge">Endüstri 4.0 Uyumlu</span>
+                <span class="badge">AI Destekli Kalite</span>
                 <span class="badge">Scalable Capacity</span>
-                <span class="badge">AI QC Ready</span>
             </div>
         </div>
     </section>
 
     <section class="space-y-8 reveal">
         <div class="flex items-center gap-6 px-4">
-            <h2 class="text-slate-400 text-sm font-bold uppercase tracking-[0.3em]">Resmi İşletme Performans Verileri (2024)</h2>
+            <h2 class="text-slate-400 text-sm font-bold uppercase tracking-[0.3em]">Resmi İşletme Performans Verileri (2024 Audit)</h2>
             <div class="h-[1px] flex-1 bg-white/10"></div>
-            <span class="badge bg-blue-900/20 text-blue-400">KOSGEB ONAYLI</span>
+            <span class="badge bg-blue-900/20 text-blue-400 border-blue-500/30">KOSGEB ONAYLI VERİLER</span>
         </div>
         
+        <p class="text-slate-400 text-base max-w-4xl px-4 leading-relaxed italic">
+            "Kurumsal holding projelerinde tedarik zinciri sürdürülebilirliğini sıfırlayan rasyonel kanıtlarımız. Yüksek finansal çevikliğimiz, projeleriniz için gereken hammadde stoklarını anında realize edebilmemizi garanti eder."
+        </p>
+
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-            <div class="glass-panel p-8 text-center stat-card"><p class="text-slate-500 text-[10px] font-bold uppercase mb-3">Net Satış Artışı</p><p class="text-3xl font-black text-white">%44</p></div>
-            <div class="glass-panel p-8 text-center stat-card"><p class="text-slate-500 text-[10px] font-bold uppercase mb-3">Aktif Büyüklük</p><p class="text-3xl font-black text-white">%37</p></div>
-            <div class="glass-panel p-8 text-center stat-card"><p class="text-slate-500 text-[10px] font-bold uppercase mb-3">Kapasite Kullanım</p><p class="text-3xl font-black text-white">%77,2</p></div>
-            <div class="glass-panel p-8 text-center stat-card border-amber-500/50"><p class="text-amber-500 text-[10px] font-bold uppercase mb-3">Tahsilat Hızı</p><p class="text-3xl font-black text-white">40 Gün</p></div>
-            <div class="glass-panel p-8 text-center stat-card"><p class="text-slate-500 text-[10px] font-bold uppercase mb-3">İşgücü Verimi</p><p class="text-3xl font-black text-white">%36</p></div>
-            <div class="glass-panel p-8 text-center stat-card"><p class="text-slate-500 text-[10px] font-bold uppercase mb-3">TR Sıralaması</p><p class="text-3xl font-black text-white">79.</p></div>
+            <div class="glass-panel p-8 text-center stat-card"><p class="text-slate-500 text-[10px] font-bold uppercase mb-3">Net Satış Artışı</p><p class="text-4xl font-black text-white counter" data-target="44">%44</p><p class="text-[9px] text-blue-400 mt-2 italic">Sektör: %35</p></div>
+            <div class="glass-panel p-8 text-center stat-card"><p class="text-slate-500 text-[10px] font-bold uppercase mb-3">Aktif Büyüklük</p><p class="text-4xl font-black text-white counter" data-target="37">%37</p><p class="text-[9px] text-blue-400 mt-2 italic">Sektör: %24</p></div>
+            <div class="glass-panel p-8 text-center stat-card"><p class="text-slate-500 text-[10px] font-bold uppercase mb-3">Kapasite Kullanımı</p><p class="text-4xl font-black text-white counter" data-target="77">%77,2</p><p class="text-[9px] text-blue-400 mt-2 italic">Sektör: %71</p></div>
+            <div class="glass-panel p-8 text-center stat-card border-amber-500/50"><p class="text-amber-500 text-[10px] font-bold uppercase mb-3">Tahsilat Hızı</p><p class="text-4xl font-black text-white counter" data-target="40">40 Gün</p><p class="text-[9px] text-amber-400 mt-2 italic">Sektör: 68 Gün</p></div>
+            <div class="glass-panel p-8 text-center stat-card"><p class="text-slate-500 text-[10px] font-bold uppercase mb-3">İşgücü Verimliliği</p><p class="text-4xl font-black text-white counter" data-target="36">%36</p><p class="text-[9px] text-blue-400 mt-2 italic">Sürekli Gelişim</p></div>
+            <div class="glass-panel p-8 text-center stat-card"><p class="text-slate-500 text-[10px] font-bold uppercase mb-3">TR Sıralaması</p><p class="text-4xl font-black text-white counter" data-target="79">79.</p><p class="text-[9px] text-blue-400 mt-2 italic">561 Firma İçinde</p></div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div class="glass-panel p-10 space-y-6">
-                <h4 class="text-base font-bold text-white uppercase tracking-wider mb-6">Sektörel Karşılaştırma Grafiği</h4>
+                <h4 class="text-base font-bold text-white uppercase tracking-wider mb-6">Sektörel Karşılaştırma Analizi</h4>
                 <div class="space-y-6">
-                    <div><div class="flex justify-between text-sm mb-2"><span class="text-slate-400">Net Satış Artışı</span><span class="text-white font-bold">%44 <span class="text-slate-600 font-normal">/ Sektör %35</span></span></div><div class="bar-bg"><div class="bar-fill" style="width:88%"></div></div></div>
+                    <div><div class="flex justify-between text-sm mb-2"><span class="text-slate-400">Net Satış Artışı (Büyüme)</span><span class="text-white font-bold">%44 <span class="text-slate-600 font-normal">/ Sektör %35</span></span></div><div class="bar-bg"><div class="bar-fill" style="width:88%"></div></div></div>
+                    <div><div class="flex justify-between text-sm mb-2"><span class="text-slate-400">Aktif Büyüklük Artışı</span><span class="text-white font-bold">%37 <span class="text-slate-600 font-normal">/ Sektör %24</span></span></div><div class="bar-bg"><div class="bar-fill" style="width:74%"></div></div></div>
                     <div><div class="flex justify-between text-sm mb-2"><span class="text-slate-400">Kapasite Kullanım Oranı</span><span class="text-white font-bold">%77,2 <span class="text-slate-600 font-normal">/ Sektör %71</span></span></div><div class="bar-bg"><div class="bar-fill" style="width:77%"></div></div></div>
                 </div>
             </div>
             <div class="glass-panel p-10 flex flex-col justify-center bg-blue-900/10">
-                <p class="text-slate-400 text-sm leading-relaxed italic">
-                    "Satınalma profesyonelleri için finansal sürdürülebilirlik kritiktir. Avrupa Cıvata, KOSGEB 2024 resmi raporuyla tedarik zinciri güvenilirliğini %100 kanıtlamıştır."
+                <div class="flex items-center gap-6 mb-6">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white"><i data-lucide="award" class="w-10 h-10"></i></div>
+                    <div><h4 class="text-xl font-bold text-white uppercase italic">Finansal Kalite Notu: AAA</h4><p class="text-slate-500 text-xs">Resmi KOSGEB Raporu tescilli tedarik zinciri güvenilirliği.</p></div>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Sektörümüzdeki 561 tescilli işletme arasında aktif büyüklük bakımından <strong>79. sırada</strong> yer alarak mali yapımızı ve sürdürülebilirliğimizi ispatladık.
                 </p>
             </div>
         </div>
     </section>
 
     <section class="glass-glow p-12 sm:p-16 space-y-12 bg-gradient-to-br from-blue-900/5 to-transparent reveal">
-        <div class="flex items-center gap-4 border-b border-white/10 pb-6"><i data-lucide="cpu" class="text-blue-500 w-10 h-10"></i><h2 class="text-4xl sm:text-5xl font-black text-white tracking-tighter italic uppercase">Manufacturing Arsenal</h2></div>
-        
+        <div>
+            <div class="flex items-center gap-4 mb-2"><i data-lucide="cpu" class="text-blue-500 w-10 h-10"></i><h2 class="text-4xl sm:text-5xl font-black text-white tracking-tighter italic uppercase">Manufacturing Arsenal</h2></div>
+            <p class="text-blue-400 text-sm font-bold tracking-[0.2em] uppercase mt-2">513 kW Kurulu Güç • 1.369 Makine Puanı • 20 Ton Kaldırma Kapasitesi</p>
+        </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div class="space-y-4">
-                <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs border-b border-white/10 pb-4 mb-6 flex items-center gap-3"><i data-lucide="move-3d" class="w-5 h-5"></i> CNC Dik İşleme / Milling (7 Units)</h4>
-                <div class="bg-blue-900/20 border border-blue-500/30 p-5 rounded-2xl mb-4 relative overflow-hidden">
+                <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs border-b border-white/10 pb-4 mb-6 flex items-center gap-3"><i data-lucide="move-3d" class="w-5 h-5"></i> CNC Dik İşleme Merkezleri (7 Adet)</h4>
+                
+                <div class="bg-blue-900/20 border border-blue-500/30 p-6 rounded-3xl mb-6 relative overflow-hidden">
                     <div class="absolute right-0 top-0 h-full w-1 bg-blue-500"></div>
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-white font-bold text-lg italic">Double Column CNC</span>
-                        <span class="mono text-blue-400 font-black text-xl">5.200 × 2.700 mm</span>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-white font-bold text-xl italic uppercase">Çift Kolonlu CNC Dik İşleme</span>
+                        <span class="mono text-blue-400 font-black text-2xl">5.200 × 2.700 mm</span>
                     </div>
-                    <p class="text-[11px] text-blue-300 font-mono bg-black/40 p-3 rounded-lg italic">
-                        Özel fikstürleme mühendisliğimiz ile <strong>7 METREYE KADAR</strong> yekpare işleme kapasitesi.
+                    <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">2 Adet Aktif / Large-Scale Machining</p>
+                    <p class="text-[12px] text-blue-300 font-mono leading-relaxed bg-black/40 p-4 rounded-xl">
+                        <strong class="text-white uppercase tracking-widest">Stratejik Mühendislik:</strong> Kendi bünyemizde tasarladığımız özel fikstürleme sistemleri sayesinde, bu tezgahlarda <strong>7 METREYE KADAR</strong> büyük gövde ve şasi parçaları, ±0,01 mm toleransla yekpare işlenebilmektedir.
                     </p>
                 </div>
-                <div class="machine-row flex justify-between items-center gap-3"><div><p class="text-white font-bold text-base">CNC Milling (1 Unit)</p></div><span class="mono text-white font-bold bg-white/5 px-4 py-2 rounded-lg text-sm">3.200 mm</span></div>
-                <div class="machine-row flex justify-between items-center gap-3"><div><p class="text-white font-bold text-base">CNC Milling (3 Units)</p></div><span class="mono text-white font-bold bg-white/5 px-4 py-2 rounded-lg text-sm">1.600 mm</span></div>
-                <div class="flex flex-wrap gap-2 pt-4"><span class="badge">Precision: ±0,01 mm</span><span class="badge">Speed: 4.500 RPM</span></div>
+
+                <div class="machine-row flex justify-between items-center gap-3">
+                    <div><p class="text-white font-bold text-lg">CNC Dik İşleme Merkezi (1 Adet)</p></div>
+                    <span class="mono text-white font-bold bg-white/5 px-4 py-2 rounded-lg text-sm uppercase">3.200 mm Kapasite</span>
+                </div>
+                <div class="machine-row flex justify-between items-center gap-3">
+                    <div><p class="text-white font-bold text-lg">CNC Dik İşleme Merkezi (3 Adet)</p></div>
+                    <span class="mono text-white font-bold bg-white/5 px-4 py-2 rounded-lg text-sm uppercase">1.600 mm Kapasite</span>
+                </div>
+                <div class="machine-row flex justify-between items-center gap-3">
+                    <div><p class="text-white font-bold text-lg">CNC Dik İşleme Merkezi (1 Adet)</p></div>
+                    <span class="mono text-white font-bold bg-white/5 px-4 py-2 rounded-lg text-sm uppercase">1.200 mm Kapasite</span>
+                </div>
+                
+                <div class="flex flex-wrap gap-3 pt-6">
+                    <span class="badge border-blue-500/50">Tolerans: ±0,01 mm</span>
+                    <span class="badge bg-white/5 text-slate-300">Devir: 4.500 RPM</span>
+                    <span class="badge bg-white/5 text-slate-300">CMM Doğrulamalı</span>
+                </div>
             </div>
 
-            <div class="space-y-10">
+            <div class="space-y-12">
                 <div>
-                    <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs border-b border-white/10 pb-4 mb-6 flex items-center gap-3"><i data-lucide="circle-dot" class="w-5 h-5"></i> CNC Tornalama / Turning (4 Units)</h4>
-                    <div class="machine-row flex justify-between items-center gap-3">
-                        <div><p class="text-white font-bold text-lg italic">High Torque CNC Lathe</p></div>
-                        <span class="mono text-blue-400 font-black text-xl bg-blue-900/30 px-4 py-2 rounded-lg">Ø400 × 2.200 mm</span>
+                    <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs border-b border-white/10 pb-4 mb-6 flex items-center gap-3"><i data-lucide="circle-dot" class="w-5 h-5"></i> CNC Tornalama (4 Adet)</h4>
+                    <div class="machine-row flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                        <div><p class="text-white font-bold text-xl italic uppercase">Yüksek Torklu CNC Torna Hattı</p><p class="text-slate-500 text-xs font-bold mt-1 uppercase">Miller, Akslar ve Dev Silindirik Parçalar</p></div>
+                        <span class="mono text-blue-400 font-black text-2xl bg-blue-900/30 border border-blue-500/20 px-4 py-2 rounded-xl">Ø400 × 2.200 mm</span>
                     </div>
                 </div>
+
                 <div>
-                    <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs border-b border-white/10 pb-4 mb-6 flex items-center gap-3"><i data-lucide="hammer" class="w-5 h-5"></i> Sıcak Dövme & Pres Hattı</h4>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-black/20 border border-orange-500/30 p-5 rounded-2xl text-center"><div class="text-2xl font-black text-orange-400">150 TON</div><div class="text-[10px] text-slate-500 uppercase mt-1">Friction Press</div></div>
-                        <div class="bg-black/20 border border-blue-500/30 p-5 rounded-2xl text-center"><div class="text-2xl font-black text-blue-400">60 TON</div><div class="text-[10px] text-slate-500 uppercase mt-1">Hydraulic Press</div></div>
+                    <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs border-b border-white/10 pb-4 mb-6 flex items-center gap-3"><i data-lucide="hammer" class="w-5 h-5"></i> Pres & Sıcak Form Verme Hattı</h4>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-black/20 border border-orange-500/30 p-6 rounded-2xl text-center">
+                            <i data-lucide="flame" class="mx-auto text-orange-500 mb-2"></i>
+                            <div class="text-3xl font-black text-orange-400 mb-1">150 TON</div>
+                            <div class="text-[10px] text-slate-500 uppercase tracking-widest">Friksiyon / Friction Press</div>
+                        </div>
+                        <div class="bg-black/20 border border-blue-500/30 p-6 rounded-2xl text-center">
+                            <i data-lucide="settings" class="mx-auto text-blue-500 mb-2"></i>
+                            <div class="text-3xl font-black text-blue-400 mb-1">60 TON</div>
+                            <div class="text-[10px] text-slate-500 uppercase tracking-widest">Hidrolik / Hydraulic Press</div>
+                        </div>
+                    </div>
+                    <div class="machine-row flex justify-between items-center">
+                        <span class="text-white font-bold text-base uppercase italic">Eksantrik Pres Seri Üretim Hattı</span>
+                        <span class="mono text-slate-400 font-bold bg-white/5 px-4 py-2 rounded text-xs">Aktif Kapasite</span>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        
+        <div class="space-y-6">
+            <h4 class="text-blue-400 font-bold uppercase tracking-widest text-xs flex items-center gap-3"><i data-lucide="wrench" class="w-5 h-5"></i> İlave Üretim & Entegre Çözümler</h4>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+                <div class="bg-white/5 p-5 rounded-2xl border border-white/5"><i data-lucide="settings-2" class="mx-auto text-blue-500 mb-3 w-8 h-8"></i><p class="text-slate-300 text-[10px] font-bold uppercase leading-tight">Yüksek Hızlı Ovalama<br>(Diş Açma)</p></div>
+                <div class="bg-white/5 p-5 rounded-2xl border border-white/5"><i data-lucide="git-commit" class="mx-auto text-blue-500 mb-3 w-8 h-8"></i><p class="text-slate-300 text-[10px] font-bold uppercase leading-tight">Özel Saplama<br>Üretim Robotu</p></div>
+                <div class="bg-white/5 p-5 rounded-2xl border border-white/5"><i data-lucide="circle" class="mx-auto text-blue-500 mb-3 w-8 h-8"></i><p class="text-slate-300 text-[10px] font-bold uppercase leading-tight">Manuel Torna<br>İstasyonu</p></div>
+                <div class="bg-white/5 p-5 rounded-2xl border border-white/5"><i data-lucide="combine" class="mx-auto text-blue-500 mb-3 w-8 h-8"></i><p class="text-slate-300 text-[10px] font-bold uppercase leading-tight">Kaynak &<br>Prototipleme</p></div>
+                <div class="bg-blue-900/30 p-5 rounded-2xl border border-blue-500/30 col-span-2 flex flex-col justify-center"><i data-lucide="microscope" class="mx-auto text-blue-400 mb-3 w-8 h-8"></i><p class="text-blue-400 text-[10px] font-black uppercase">CMM Hassas Ölçüm &<br>3.1 Şecere Denetimi</p></div>
             </div>
         </div>
     </section>
 
     <section class="glass-panel p-12 space-y-8 bg-gradient-to-t from-blue-900/5 to-transparent border-t-4 border-purple-600 reveal">
-        <div class="flex items-center gap-4"><i data-lucide="award" class="text-purple-500 w-8 h-8"></i><h2 class="text-3xl font-black text-white tracking-tighter uppercase italic">Kalite & Ham Madde Şeceresi</h2></div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="space-y-6">
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Hammadde girişinden sevkiyata kadar her aşama <strong>üç boyutlu CMM ölçüm sistemi</strong> ve mühendislik denetimiyle kontrol altındadır. Savunma sanayi ve ağır makine projelerinde <strong>3.1 Malzeme Sertifikası</strong> ile tam şecerelendirilmiş üretim yapılmaktadır.
-                </p>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Çelik hammadde yalnızca <strong>NSG</strong> ve <strong>Suat Çelik</strong> gibi onaylı Tier-1 tedarikçilerden temin edilmekte; her sevkiyat hassas ölçüm raporuyla tescil edilmektedir.
-                </p>
-                <div class="bg-black/40 border border-purple-500/30 p-6 rounded-2xl">
-                    <p class="text-white font-bold text-sm mb-2 uppercase tracking-widest">Sertifika: ISO 9001:2015</p>
-                    <div class="flex justify-between items-center text-xs mono">
-                        <span class="text-slate-500">Belge No:</span>
-                        <span class="text-purple-400 font-bold">01-1644-01</span>
-                    </div>
-                    <div class="flex justify-between items-center text-xs mono mt-2">
-                        <span class="text-slate-500">Doğrulama:</span>
-                        <span class="text-green-500 font-bold">TÜRKAK TBDS AKTİF</span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-wrap gap-2 items-start content-start pt-2">
-                <span class="badge border-purple-500/50 text-purple-400">Traceability Matrix</span>
-                <span class="badge border-blue-500/30">NSG Certified Steel</span>
-                <span class="badge border-blue-500/30">Suat Celik Supplier</span>
-                <span class="badge bg-blue-600/20 text-blue-300">Anadolu Isuzu OEM Approved</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="glass-panel p-12 space-y-8 reveal">
-        <div class="flex items-center gap-4"><i data-lucide="factory" class="text-blue-500 w-8 h-8"></i><h2 class="text-3xl font-black text-white tracking-tighter uppercase italic">Hizmet Alanlarımız</h2></div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <div class="bg-white/5 border border-white/5 p-4 rounded-xl text-center"><p class="text-white font-bold text-[10px] uppercase">Otomotiv OEM</p></div>
-            <div class="bg-white/5 border border-white/5 p-4 rounded-xl text-center"><p class="text-white font-bold text-[10px] uppercase">Savunma Sanayii</p></div>
-            <div class="bg-white/5 border border-white/5 p-4 rounded-xl text-center"><p class="text-white font-bold text-[10px] uppercase">Liman İşletmeleri</p></div>
-            <div class="bg-white/5 border border-white/5 p-4 rounded-xl text-center"><p class="text-white font-bold text-[10px] uppercase">Maden & Kırma</p></div>
-            <div class="bg-white/5 border border-white/5 p-4 rounded-xl text-center"><p class="text-white font-bold text-[10px] uppercase">Rafineriler</p></div>
-            <div class="bg-white/5 border border-white/5 p-4 rounded-xl text-center"><p class="text-white font-bold text-[10px] uppercase">Makine İmalatçıları</p></div>
-            <div class="bg-white/5 border border-white/5 p-4 rounded-xl text-center"><p class="text-white font-bold text-[10px] uppercase">Enerji & Baraj</p></div>
-            <div class="bg-white/5 border border-white/5 p-4 rounded-xl text-center"><p class="text-white font-bold text-[10px] uppercase">Tersaneler</p></div>
-        </div>
-    </section>
-
-    <section class="glass-panel p-12 space-y-8 reveal">
-        <div class="flex items-center gap-4"><i data-lucide="handshake" class="text-blue-500 w-8 h-8"></i><h2 class="text-3xl font-black text-white tracking-tighter uppercase italic">Referanslar & Vizyon</h2></div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
-            <div class="bg-white/[0.03] p-4 rounded-xl text-center border border-white/5 hover:border-blue-500/40 transition-all"><p class="text-white font-bold text-xs uppercase">Sabancı Grubu</p></div>
-            <div class="bg-white/[0.03] p-4 rounded-xl text-center border border-white/5 hover:border-blue-500/40 transition-all"><p class="text-white font-bold text-xs uppercase">Oyak Grubu</p></div>
-            <div class="bg-white/[0.03] p-4 rounded-xl text-center border border-white/5 hover:border-blue-500/40 transition-all"><p class="text-white font-bold text-xs uppercase">Koç Grubu</p></div>
-            <div class="bg-white/[0.03] p-4 rounded-xl text-center border border-white/5 hover:border-blue-500/40 transition-all"><p class="text-white font-bold text-xs uppercase">SASA</p></div>
-        </div>
-        <div class="bg-blue-900/20 p-8 rounded-3xl text-center border border-blue-500/30 flex flex-col justify-center">
-            <p class="text-blue-400 font-black text-sm uppercase tracking-[0.2em]">Global OEM (Tier-1) Stratejik Tedarik Hedeflerimiz</p>
-            <p class="text-blue-500 text-xs font-bold uppercase mt-3 mono tracking-widest">ASELSAN • ANADOLU ISUZU • TEMSA • OTOKAR • BMC • ROKETSAN</p>
-        </div>
-    </section>
-
-    <footer class="glass-glow p-12 sm:p-16 space-y-10 reveal">
-        <div class="flex flex-col lg:flex-row justify-between items-center gap-10">
-            <div class="text-center lg:text-left">
-                <p class="text-3xl font-black text-white tracking-tighter uppercase italic">Hakan Burak PARLAKKÂN</p>
-                <p class="text-blue-400 font-bold tracking-[0.3em] uppercase text-xs mt-2">Mechanical Engineer / General Manager</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-xs mono text-slate-400 tracking-widest uppercase">
-                <div class="space-y-4">
-                    <div class="flex items-start gap-4 hover:text-white transition-colors"><i data-lucide="map-pin" class="text-blue-500 w-5 h-5 shrink-0 mt-1"></i><span>Yeşiloba Mah. 46251 Sok. 4/A<br>Seyhan, Adana – Türkiye</span></div>
-                    <div class="flex items-center gap-4 hover:text-white transition-colors"><i data-lucide="phone" class="text-blue-500 w-5 h-5 shrink-0"></i><span>+90 (322) 322 52 14</span></div>
-                </div>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4 hover:text-white transition-colors"><i data-lucide="mail" class="text-blue-500 w-5 h-5 shrink-0"></i><span>info@avrupacivata.com</span></div>
-                    <div class="flex items-center gap-4 hover:text-white transition-colors"><i data-lucide="instagram" class="text-blue-500 w-5 h-5 shrink-0"></i><a href="https://www.instagram.com/avrupacivatamakineyedekparca/" target="_blank" class="hover:text-blue-400">@avrupacivatamakine</a></div>
-                </div>
-            </div>
-        </div>
-        <p class="text-center text-slate-700 text-[10px] mono uppercase tracking-[0.8em]">Precision Fasteners & Heavy Industry Machining — 50+ Years Legacy</p>
-    </footer>
-
-</div>
-<script>lucide.createIcons();</script>
-</body>
-</html>
+        <div class="flex items-center gap-4"><i data-lucide="award" class="text-purple-50
